@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="4">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Sora:wght@700&display=swap');
+
+    .carousel {
+        margin-left: -150px;
+        margin-right: -150px;
+        margin-top: -100px;
+
+    }
+
+    .navbar a {
+        position: relative;
+        color: var(--dark);
+        font-family: 'Poppins', sams-serif;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        padding: 0px 10px;
+
+    }
+
+    .logo {
+
+        width: 100px;
+    }
+
+    .navbar .nav-link {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .navbar {
+        position: fixed;
+        right: 0;
+        left: 0;
+        border-radius: 8px;
+        margin-left: 150px;
+        margin-right: 150px;
+        top: 2%;
+        text-decoration: none;
+
+
+    }
+
+    .navbar .nav-link.active {
+        color: var(--primary) !important;
+    }
+
+    @media screen and (max-width:1024px) {
+        .navbar {
+            top: 0%;
+            right: -150px;
+            left: -150px;
+            border-radius: 0px;
+
+        }
+
+        .carousel {
+            margin-left: -150px;
+            margin-right: -150px;
+            margin-top: 100px;
+
+        }
+   
+
+
+
+
+
+
+    }
+    @media  screen and (max-width:768px) {
+        
+        h3.animate::before{
+            position:none;
+            height:0%;
+        }
+    }
+
+    @media screen and (max-width:576px){
+        .carousel {
+            margin-left: -20px;
+            margin-right: -20px;
+            margin-top: 100px;
+
+        }
+        
+    
+        
+    }
+
+    .animate {
+        position: relative;
+        color: transparent;
+        -webkit-text-stroke: 0.3vw;
+        text-align: center;
+        font-size: 7vw;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: cursive;
+
+    }
+
+    .animate::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        color: #f3eff3;
+        -webkit-text-stroke: 0vw;
+        border-right: 2px solid;
+        overflow: hidden;
+        animation: animate 6s linear infinite;
+
+
+
+
+    }
+
+    @keyframes animate {
+
+        0%,
+        10%,
+        100% {
+            width: 0;
+        }
+
+        70%,
+        90% {
+            width: 100%
+        }
+    }
+
+    .carousel-caption {
+        bottom: 200px;
+
+    }
+
+    /* .p-t-30,
+.section-title {
+  padding-top: 30px;
+} */
+
+    #about-us .common-cnt p {
+        text-align: justify;
+    }
+
+    .section-title,
+    .our-best-service .service-box,
+    .price_list {
+        padding-bottom: 30px;
+    }
+
+
+    .m-b-30,
+    section .section-top p,
+    #footer .fcard,
+    .our-team .team-box,
+    .department-list .box-img-cnt,
+    .img-gallery .popup-gallery {
+        margin-bottom: 30px;
+    }
+
+    .m-b-25,
+    .common-cnt>p,
+    .box-img-cnt .box-cnt p,
+    .our_location #world-map-markers {
+        margin-bottom: 25px;
+    }
+
+    #about-us {
+        padding: 150px 50px 50px 50px;
+    }
+
+    @media screen and (max-width: 700px) {
+        #about-us {
+            padding: 50px 10px 50px 10px;
+        }
+
+    }
+
+    #about-us .section-title h2 {
+        font-size: 26px;
+        line-height: 30px;
+        color: #757575;
+        font-weight: 500;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    #about-us .section-title h2 span {
+        color: #3c843b;
+    }
+
+    #about-us .section-title .sub-title_ac {
+        color: #028b0b;
+    }
+
+    #about-us .section-title p {
+        color: #000000;
+        padding-left: 20px;
+        opacity: 0.7;
+    }
+
+    #about-us .box-img img {
+        border-radius: 10px;
+    }
+
+    #about-us .box-shadow {
+        box-shadow: 0px 10px 15px 0px rgb(0 0 0 / 20%);
+    }
+
+    #about-us .section-title h2:before {
+        content: "";
+        width: 2px;
+        height: 20px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #3c843b;
+    }
+
+    section#about-us .section-top p {
+        font-size: 22px;
+        line-height: 30px;
+        color: #000;
+        font-weight: 400;
+    }
+
+    #about-us .common-cnt a {
+        background: transparent;
+        border-radius: 30px;
+        border: 1px solid #3c843b;
+        color: #3c843b;
+    }
+
+    #about-us .common-cnt a:hover {
+        background: #3c843b;
+        border-radius: 30px;
+        border: 1px solid #3c843b;
+        color: #fff;
+    }
+
+    #hs_footer {
+        width: 100%;
+        float: left;
+        color: #fff;
+        background: #3c843b;
+        padding-bottom: 20px;
+    }
+
+    #hs_footer .hs_footer_content .hs_footer_menu {
+        width: 100%;
+        float: left;
+    }
+
+    #hs_footer .hs_footer_content .hs_footer_menu ul {
+        list-style: none;
+        padding-left: 0px;
+        width: 100%;
+        text-align: center;
+        display: table;
+    }
+
+    #hs_footer .hs_footer_content .hs_footer_menu ul li {
+        width: 16.66666666666667%;
+        float: left;
+    }
+
+    #hs_footer .hs_footer_content .hs_footer_menu ul li a {
+        padding: 15px 0px;
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.2);
+        color: inherit;
+        box-shadow: inset -1px 0 0 rgb(255 255 255 / 30%);
+    }
+
+    #hs_footer .hs_footer_content .hs_footer_menu ul li a:hover {
+        background: rgba(0, 0, 0, 0.25);
+        color: #fff;
+    }
+
+    #hs_footer .hs_footer_content h4 {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+    }
+
+    .hs_footer_about_us {
+        width: 100%;
+        float: left;
+        padding: 10px 0px;
+        position: relative;
+        display: flex;
+    }
+
+    @media screen and (max-width:768px) {
+        #hs_footer .hs_footer_content {
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .hs_footer_about_us {
+            flex-direction: column;
+            padding-left: 30px;
+        }
+
+        .hs_footer_about_us div {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .hs_footer_about_us p {
+            top: 0;
+        }
+
+        .hs_footer_content .col-lg-3,
+        .hs_footer_content .col-lg-4 {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+
+    }
+
+    .hs_heading {
+        color: #3c843b;
+        margin: 30px auto;
+        padding-bottom: 15px;
+        position: relative;
+        font-size: 24px;
+    }
+
+    #hs_footer .hs_footer_content h4::before {
+        border-color: #fff;
+    }
+
+    .hs_heading:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 65px;
+        border-bottom: 2px solid #7f9aa0;
+    }
+
+    .hs_margin_60 {
+        margin-bottom: 60px;
+    }
+
+    .hs_about_us {
+        position: relative;
+        align-items: center;
+        display: grid;
+    }
+
+    .hs_about_us p {
+        padding: 10px 20px;
+        text-align: justify;
+        margin-right: 30px;
+        /* border-left: 1px solid rgba(0, 0, 0, 0.2); */
+    }
+
+    .hs_footer_about_us img {
+        position: relative;
+        /* right: -50px; */
+        max-height: 150px
+    }
+
+    .hs_social {
+        float: left;
+        width: 100%;
+    }
+
+    .hs_social ul {
+        list-style: none;
+        padding-left: 0px;
+        margin: 25px auto;
+    }
+
+    .hs_social ul li {
+        float: left;
+        margin-right: 15px;
+    }
+
+    .hs_social ul li a {
+        display: block;
+        text-align: center;
+        /* vertical-align: middle; */
+        color: #fff;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+    }
+
+    .hs_social ul li a i {
+        min-width: 14px;
+        opacity: 0.7;
+        font-size: 2rem;
+    }
+
+    .hs_footer_link {
+        /* float: left; */
+        margin-right: 23px;
+        margin-bottom: 20px;
+    }
+
+    #hs_footer .link-wrapper {
+        float: right;
+    }
+
+    @media screen and (max-width: 768px) {
+        #hs_footer .link-wrapper {
+            float: left;
+        }
+    }
+
+    .hs_footer_link ul {
+        list-style: none;
+        padding-left: 0px;
+    }
+
+    .hs_footer_link ul li {
+        margin-bottom: 5px;
+    }
+
+    .hs_twitter_widget ul li a {
+        color: #fff;
+        width: calc(100% - 50px);
+        float: left;
+        text-decoration: none;
+    }
+
+    .hs_twitter_widget ul li i {
+        font-size: 25px;
+        float: left;
+        width: 50px;
+        margin-bottom: 20px;
+        transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+    }
+
+    .hs_twitter_widget ul li:hover i {
+        padding-left: 13px;
+        padding-top: 10px;
+        transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+    }
+
+    .hs_twitter_widget ul {
+        list-style: none;
+        padding-left: 0px;
+    }
+
+
+
+    .hs_twitter_widget ul li a p {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 20px 10px 20px 20px;
+        position: relative;
+    }
+
+    .hs_twitter_widget ul li a p:after {
+        border-right: 10px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 10px solid transparent;
+        border-top: 10px solid transparent;
+        top: 5px;
+        left: -10px;
+        content: "";
+        position: absolute;
+    }
+
+    .hs_copyright {
+        background: #71dd70;
+        color: #fff;
+        float: left;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+        -webkit-box-shadow: 0 1px 10px rgb(0 1 1 / 20%);
+        -moz-box-shadow: 0 1px 10px rgba(0, 1, 1, 0.2);
+        box-shadow: 0 1px 10px rgb(0 1 1 / 20%);
+    }
+
+    .hs_footer_link ul li a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .img-gallery {
+        width: 80%;
+        margin: 100px auto 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 30px;
+    }
+
+    .img-gallery img {
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .img-gallery img:hover {
+        transform: scale(1.1);
+        transition-duration: .6s;
+        filter: grayscale(20%);
+        opacity: 0.9;
+    }
+
+    #service {
+        background-color: rgb(247, 29, 29);
+        padding-bottom: 50px;
+        margin-bottom: 200px;
+        background-image: url(assets/images/bg1.jpg);
+    }
+
+    #service .section-title {
+        margin-bottom: 30px;
+        position: relative;
+        /* right: -15%; */
+        justify-content: center;
+        align-items: center;
+        display: grid;
+    }
+
+    #service .section-title p {
+        opacity: 0.7;
+        color: white;
+        font-size: 16px;
+
+    }
+
+
+    .line-border-center {
+        height: 2px;
+        text-align: center;
+        margin: auto;
+        width: 70px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+
+    #service .service-item.style-3 {
+        padding: 10px 20px;
+        /* padding-top: 40px; */
+        border: 1px solid #eee;
+        background: #fff;
+        box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+        position: relative;
+        top: 0;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    #service .service-item.style-3:hover {
+        background-color: #3c843b;
+        border: 1px solid #3c843b;
+        box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+        top: -10px;
+    }
+
+    #service .service-item {
+        padding: 20px 20px;
+        margin-bottom: 30px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #service .service-item.style-3 span {
+        font-size: 50px;
+        color: #3c843b;
+    }
+
+    #service .service-item.style-3:hover span {
+        color: #FFF;
+    }
+
+    #service .flaticon-heart-1:before {
+        content: "\f11c";
+    }
+
+    #service .service-item h4 {
+        margin-top: 20px;
+    }
+
+    #service .service-item.style-3 h4 a {
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+        color: #3c843b;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    #service .service-item.style-3 p {
+        opacity: 0.7;
+        text-align: justify;
+    }
+
+    #service .service-item.style-3:hover h4 a,
+    .service-item.style-3:hover p {
+        color: #FFF;
+        opacity: 200 !important;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #service .service-item.style-3 .border-center {
+        width: 50px;
+        height: 2px;
+        background: #3c843b;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    #service .service-item.style-3:hover .border-center {
+        background: #fff;
+    }
+
+    #service .service-item.style-3 .btn.btn-theme {
+        border: 1px solid #3c843b;
+        background: #e40707;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 20px;
+        text-transform: capitalize;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+
+    #service .service-item.style-3:hover .btn.btn-theme {
+        border: 1px solid #fff;
+    }
+
+    #service .service-item.style-3 .btn.btn-theme:hover {
+        border: 1px solid #007ac0;
+        background: #007ac0;
+    }
+
+    .btn-theme:hover,
+    .btn-price:hover {
+        color: #ffffff;
+        background: #3c843b;
+        border: none;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+    #service .service-item img {
+        height: 130px;
+        width: 220px;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    <!--image slider-->
+    <section id="image-slider">
+        <div class="container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-light">
+                    <div class="container">
+                        <img class="logo" src="assets/images/logo.png" alt="">
+                        <a class="navbar-brand" href="#">
+
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" id="about">About us</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Treatment
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="./inner_page/samona.html">Samona Therapy
+                                            (Curative)</a>
+                                        <a class="dropdown-item" href="./inner_page/sodhana.html">Sodhana
+                                            Therapy (Purificatory)</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Panchakarma</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Facilities</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact Us</a>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+                </nav>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img  src="assets/images/hero2.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption  d-block">
+                            <h3 class="animate" data-text="Navaratna Ayur">NavaratnaAyur</h3>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+                        <img  src="assets/images/hero2.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption  d-block">
+                            <h3 class="animate" data-text="Navaratna Ayur">NavaratnaAyur</h3>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+                        <img  src="assets/images/hero3.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption  d-block">
+                            <h3 class="animate" data-text="Navaratna Ayur">NavaratnaAyur</h3>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+        </div>
+    </section>
+    <!--About us-->
+    <section id="about-us">
+        <div class="about-us-section">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title col-12 aos-init aos-animate" data-aos="fade-up">
+                        <h2><span>About </span>Us</h2>
+                        <p><span class="sub-title_ac">Acupunture</span> for specific patient.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="box-img box-shadow aos-init aos-animate" data-aos="fade-up">
+                            <img class="img-fluid" src="./assets/images/hero3.png" alt="">
+                            <span class="section-line aos-init aos-animate" data-aos="fade-up"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 px-lg-5">
+                        <div class="common-cnt aos-init aos-animate" data-aos="fade-up">
+                            <div class="section-top">
+                                <p><strong class="color-defult">Navaratna Ayur</strong> is an Ayurvedic Health Center
+                                    established by skilled and specialist doctors of Nepal.</p>
+                            </div>
+                            <p>Ayurveda is the traditioal healing mortality of the vedic culture with
+                                the history of more than 5000 years.
+                                Ayurveda is a natural approach for creating balanceamd strenghtening the
+                                body healing abilities. Navaratna
+                            </p>
+                            <p>Here with the traditional technology of Ayurveda treating all the diseases of
+                                the patients as well as gastric, gastric, pinas, obesity, pressure, diabetes,
+                                skin disease, hair loss, bath disease, bone feeding, nerves, headache. Special treatment
+                                for migraine, depression, sex power loss, piles, fistula, fisher etc. is done.</p>
+                            <p>
+                                <a class="btn btn-primary btn-simple btn-round margin-0 aos-init aos-animate"
+                                    data-aos="flip-up">View More</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Services-->
+    <section id="service" class="service-area bg-f8 animatedParent animateOnce">
+        <div class="container-md">
+            <div class="section-title">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>Our <span class="color-defult">Services</span></h2>
+                        <div class="line-border-center bg-defult"></div>
+                        <p>Health cannot be received in donation, It is to be cultivated from within, naturally.’
+                            John Rusk HEALTH SCENARIO : Health is the first victim of Modern Life. Noise, pollution,
+                            adulteration and above all, the stresses and strains of modern life corrode the mental
+                            and physical health of city-dwellers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-4 ">
+                        <div class="service-item text-center style-3">
+                            <div class="img-wrapper">
+                                <img class="img-fuild" src="assets/images/panchakarma.jpg" alt="">
+                            </div>
+                            <h4><a href="panchakarma.html">Panchakarma</a></h4>
+                            <div class="border-center"></div>
+                            <p class="px-3"> Whole body massage with relaxation weight maintain package, anxiety
+                                disorder , hypertention, back pain, joint pain, cervical spondylitis lumber
+                                spondylitis, degenerative diseases, migraine, sinusins, nasal ... </p>
+                            <a href="panchakarma.html" class="btn btn-theme margin-top-20" data-text="Send Message">Read
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-4">
+                        <div class="service-item text-center style-3">
+                            <div class="img-wrapper">
+                                <img class="img-fuild" src="assets/images/therapy.jpeg" alt="">
+                            </div>
+                            <h4><a href="therapy.html">Therapy</a></h4>
+                            <div class="border-center"></div>
+                            <p class="px-3"> Ancient, profound and effective, the field of Ayurveda is a millenia
+                                old tradition of being one with nature. It relies on a deep understanding nature's
+                                countless treasures to heal us of various ailments,and helps us be at our best ...
+                            </p>
+                            <a href="therapy.html" class="btn btn-theme margin-top-20" data-text="Send Message">Read
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-4">
+                        <div class="service-item text-center style-3">
+                            <div class="img-wrapper">
+                                <img class="img-fuild" src="assets/images/shirodhara.jpg" alt="">
+                            </div>
+                            <h4><a href="shirodhara.html">Shirodhara</a></h4>
+                            <div class="border-center"></div>
+                            <p class="px-3"> Shirodhara is derived from the Sanskrit words ‘Shira’ meaning head and
+                                ‘Dhara’ meaning flow. It is a unique Ayurvedic therapy that involves pouring a
+                                steady flow of liquid over the forehead in an oscillating motion. </p>
+                            <a href="shirodhara.html" class="btn btn-theme margin-top-20" data-text="Send Message">Read
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-4">
+                        <div class="service-item text-center style-3">
+                            <div class="img-wrapper">
+                                <img class="img-fuild" src="assets/images/Ksharsutra.jpg" alt="">
+                            </div>
+                            <h4><a href="ksharsutra.html">Ksharsutra</a></h4>
+                            <div class="border-center"></div>
+                            <p class="px-3"> Kshara sutra therapy is a minimal invasive Ayurvedic parasurgical
+                                procedure and time-tested Ayurvedic technique in the management of anorectal
+                                disorders . it is a safe, sure and cost effective method of treatement for fistula
+                                ... </p>
+                            <a href="ksharsutra.html" class="btn btn-theme margin-top-20" data-text="Send Message">Read
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-4">
+                        <div class="service-item text-center style-3">
+                            <div class="img-wrapper">
+                                <img class="img-fuild" src="assets/images/acupunture.jpg" alt="">
+                            </div>
+                            <h4><a href="acupunture.html">Acupunture</a></h4>
+                            <div class="border-center"></div>
+                            <p class="px-3"> A system of complementary medicine in which fine needles are inserted
+                                in the skin at specific points along what are considered to be lines of energy
+                                (meridians), used in the treatment of various physical and mental conditions. </p>
+                            <a href="acupunture.html" class="btn btn-theme margin-top-20" data-text="Send Message">Read
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-4">
+                        <div class="service-item text-center style-3">
+                            <div class="img-wrapper">
+                                <img class="img-fuild" src="assets/images/yoga.jpeg" alt="">
+                            </div>
+                            <h4><a href="yoga.html">Yoga & Pranayam</a></h4>
+                            <div class="border-center"></div>
+                            <p class="px-3"> A Hindu spiritual and ascetic discipline, a part of which, including
+                                breath control, simple meditation, and the adoption of specific bodily postures, is
+                                widely practised for health and relaxation. </p>
+                            <a href="yoga.html" class="btn btn-theme margin-top-20" data-text="Send Message">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Gallery-->
+    <section id="gallery" style="background-color:skyblue;padding-bottom: 2px;margin-bottom: 20px;">
+        <br><br>
+        <h1 style="text-align:center;">Our <span style="color: #e40707;">Gallery</span></h1>
+        <h4 style="text-align:center; color:rgb(59, 199, 41)">reflecting our colour to yours</h4>
+        <div class="img-gallery">
+            <img class="img-fluid a" src="assets/images/hero3.png">
+            <img class="img-fluid a" src="assets/images/hero3.png">
+            <img class="img-fluid a" src="assets/images/hero3.png">
+            <img class="img-fluid a" src="assets/images/hero3.png">
+            <img class="img-fluid a" src="assets/images/hero3.png">
+            <img class="img-fluid a" src="assets/images/hero3.png">
+
+
+        </div>
+        <center><button type="button" class="btn btn-dark" style=" margin-bottom: 20px;">View Gallery</button></center>
+
+    </section>
+    <!--customers view-->
+
+    <!--footer-->
+    <footer id="hs_footer">
+        <div class="container-md">
+            <div class="hs_footer_content">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 col-sm-12">
+                        <div class="row">
+                            <div class="hs_footer_about_us">
+                                <div class="col-lg-3 col-md-4 col-sm-12 px-xs-3">
+                                    <h4 class="hs_heading">About Us</h4>
+                                    <a href="index.html"><img class="img-fluid" src="assets/images/logo.png"
+                                            alt="logo" width="180" height="41"></a>
+                                </div>
+                                <div class="col-lg-9 col-md-8 col-sm-12 hs_about_us">
+                                    <div class="hs_margin_60"></div>
+                                    <p>Here with the traditional technology of Ayurveda treating all the diseases of
+                                        the patients as well as gastric, gastric, pinas, obesity, pressure,
+                                        diabetes, skin disease, hair loss, bath disease, bone feeding, nerves,
+                                        headache. Special treatment for migraine, depression, sex power loss, piles,
+                                        fistula, fisher etc. is done.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="row"> -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+                        <div class="link-wrapper">
+
+                            <h4 class="hs_heading">Get in touch !</h4>
+                            <div class="hs_contact_detail">
+                                <p><i class="fas fa-map-marker-alt me-2"></i>Tripureshwor-11 Kathmandu, Nepal</p>
+                                <p><i class="fas fa-phone-volume me-2 "></i> 01-4117029</p>
+                                <p><i class="fas fa-envelope me-2"></i> info@nawaratnaayurhelthcare.com</p>
+
+                                <div class="clearfix"></div>
+                                <div class="hs_social">
+                                    <ul>
+                                        <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+                                        <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+                                        <li><a href=""><i class="fab fa-google-plus-square"></i></a></li>
+                                        <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                        <div class="link-wrapper">
+                            <h4 class="hs_heading">Useful Links</h4>
+                            <div class="clearfix"></div>
+                            <div class="hs_footer_link">
+                                <ul>
+                                    <li><a href="panchakarma.html">Panchakarma</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="facilities.html">Facilities</a></li>
+                                    <li><a href="./inner_page/samona.html">Samona Therapy</a></li>
+                                    <li><a href="./inner_page/sodhana.html">Sodhana Therapy</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="hs_copyright">Copyright ©
+        <script>document.write(new Date().getFullYear());</script> Navaratna Ayur. All Rights Reserved.
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
